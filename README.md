@@ -12,7 +12,12 @@ Example: amitshree/hello-world:my_custom_tag
 docker pull official_image:tag
 ````
 
-#### Run a container
+#### Build a docker image from Dockerfile
+````
+docker build -t amitshree/hello-world:my_custom_tag . // Run this command in the folder where Docker file is present
+````
+
+#### Run a docker container
 
 ````
 docker container run --name="name_of_the_container" official_image:tag
@@ -20,7 +25,7 @@ docker container run --name="name_of_the_container" user/repository:tag
 ````
 Example: docker container run --name hello_world amitshree/hello-world:my_custom_tag
 
-#### Remove docker container
+#### Remove a docker container
 ````
 docker container rm name_of_the_container // remove a stopped container
 docker container rm -f name_of_the_container // forcfully remove a running or stopped container
@@ -41,12 +46,12 @@ docker rmi -f amitshree/hello-world:my_custom_tag // Forcefully remove a docker 
 
 #### Push an image to hub.docker.com 
 
-Login to your docker repository first using command
+###### Login to your docker repository first using command
 ````
 docker login // To login to hub.docker.com
 ````
 
-Then push your image
+###### Push your image to docker hub
 ````
 docker push amitshree/hello-world:my_custom_tag
 ````
