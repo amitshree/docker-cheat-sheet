@@ -2,19 +2,19 @@
 
 #### Pull a docker image
     
-###### To pull an un-official image
+###### To pull a un-official image
 ````
 docker pull user/repository:tag
 
 ````
 Example: ````docker pull amitshree/hello-world:my_custom_tag````
 
-###### To pull an official image
+###### To pull a official image
 ````
 docker pull official_image:tag
 ````
 
-#### Build a docker image from Dockerfile
+#### Build a docker image from existing Dockerfile
 ````
 docker build -t amitshree/hello-world:my_custom_tag . // Run this command in the folder where Docker file is present
 ````
@@ -43,6 +43,13 @@ docker container rm -f $(docker container ls -qa) // forcefully remove all runni
 ````
 docker rmi amitshree/hello-world:my_custom_tag // Remove a docker image which has no running containers from it
 docker rmi -f amitshree/hello-world:my_custom_tag // Forcefully remove a docker image
+
+````
+
+#### Remove all docker images
+````
+docker rmi $(docker images -q) // Remove all docker images which has no running containers from it
+docker rmi -f $(docker images -q) // Forcefully remove all docker images
 
 ````
 
