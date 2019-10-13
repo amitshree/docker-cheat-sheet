@@ -13,6 +13,7 @@ Example: ````docker pull amitshree/hello-world:my_custom_tag````
 ````
 docker pull official_image:tag
 ````
+Example: ````docker pull nginx:latest````
 
 #### Build a docker image from existing Dockerfile
 ````
